@@ -1,0 +1,33 @@
+body{
+    background-color: blue;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    width: 100%;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    padding: 2em 0;
+    background:blue
+    ;
+}
+
+h1::before{
+    position: absolute;
+    content: "You Spin Me Right 'round baby right round'";
+    padding: 2em 0;
+    top: 0;
+    left: 0;
+}
+
+h1::before{
+    clip-path: circle(30% at 50% 50%);
+    background-color: blue;
+    transform: rotate(var(--rotation, 0));
+    transition: transform 1s;
+}
